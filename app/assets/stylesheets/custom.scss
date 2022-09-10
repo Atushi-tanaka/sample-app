@@ -65,9 +65,27 @@ p {
 }
 
 #logo:hover {
-  color: #fff;
+  color: silver;
   text-decoration: none;
 }
+
+#header {
+  background-color: teal;
+}
+
+li .header-list {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+li .dropdown {
+  color: #fff;
+}
+
+.header-list:hover {
+  color: silver !important;
+}
+
 
 /* デバッグウインドウ */
 
