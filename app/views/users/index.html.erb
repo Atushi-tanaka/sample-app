@@ -6,13 +6,18 @@
   <table class="table table-condensed table-hover" id="table-users">
     <thead>
       <tr>
-        <th><%= User.human_attribute_name :name %></th>
+        <th><%= User.human_attribute_name :'名前' %></th>
       </tr>
     </thead>
 
     <% @users.each do |user| %>
       <tr>
-        <td><%= link_to user.name, user %></td>
+        <td>
+          <%= link_to user.name, user %>
+           <span class="badge <%= user.admin? ? 'badge-danger rounded-1' : 'badge-secondary rounded-1' %>">
+             <%= user.admin? ? '管理者' : '一般' %>
+           </span>
+        </td>
         <td>
           <% if current_user.admin? && !current_user?(user) %>
             <%= link_to "削除", user, method: :delete,

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/users/:user_id/users', to: 'users#index'
 
   resources :users
+  resources :tasks, only: [:index, :new, :create]
 end
