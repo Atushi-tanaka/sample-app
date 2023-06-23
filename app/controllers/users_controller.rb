@@ -56,7 +56,11 @@ class UsersController < ApplicationController
 
     # paramsハッシュからユーザーを取得します。
     def set_user
-      @user = User.find(params[:id])
+      if params[:id] == "users"
+    # ユーザー一覧ページにアクセスした場合の処理を記述する（任意のコードを追加）
+      else
+        @user = User.find(params[:id])
+      end
     end
     
     # ログイン済みのユーザーか確認します。

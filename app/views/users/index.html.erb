@@ -1,5 +1,5 @@
 <% provide(:title, 'All Users') %>
-<h1>ユーザー一覧</h1>
+<h1><%= link_to "ユーザー一覧", users_path %></h1>
 
 <div class="col-md-10 col-md-offset-1">
   <%= will_paginate %>
@@ -13,7 +13,7 @@
     <% @users.each do |user| %>
       <tr>
         <td>
-          <%= link_to user.name, user %>
+          <%= link_to user.name, user_path(user) %>
            <span class="badge <%= user.admin? ? 'badge-danger rounded-1' : 'badge-secondary rounded-1' %>">
              <%= user.admin? ? '管理者' : '一般' %>
            </span>
