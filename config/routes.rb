@@ -10,9 +10,12 @@ Rails.application.routes.draw do
 
   
   get '/:user_id/users', to: 'users#index'
-  post 'posts/create', to: 'posts#create'
+  get 'about', to: 'home#about'
   get 'posts/new', to: 'posts#new'
+  post 'posts/create', to: 'posts#create'
+  get 'posts/index', to: 'posts#index'
   get 'posts/:id', to: 'posts#show', as: :post
+  get 'posts/:id/edit', to: 'posts#edit', as: :edit_post
 
   resources :users
   resources :tasks, only: [:index, :new, :create]
