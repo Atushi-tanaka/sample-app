@@ -23,6 +23,14 @@ textarea {
   margin-bottom: 10px;
 }
 
+.label-form {
+  margin-top: 5px;
+}
+
+.btn-form {
+  margin-top: 10px;
+}
+
 /* タイポグラフィ */
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,7 +42,6 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  font-style: italic;
 }
 
 h2 {
@@ -49,45 +56,45 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-  text-align: center;
 }
 
 /* ヘッダー */
+
+#header {
+  background-color: teal;
+}
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: none;
   font-style: italic;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-}
-
-#logo:hover {
-  color: silver;
-  text-decoration: none;
-}
-
-#header {
-  background-color: teal;
+  &:hover {
+    color: silver;
+    text-decoration: none;
+  }
 }
 
 li .header-list {
   color: #fff !important;
   font-weight: bold;
+  &:hover {
+    color: silver !important;
+  }
 }
 
-li .dropdown {
-  color: #fff;
+#dropdown-title {
+  background-color: teal;
 }
 
-.header-list:hover {
-  color: silver !important;
+li .dropdown-header {
+  background-color: rgba(200, 200, 200, 0.5);
+  font-weight: bold;
 }
-
 
 /* デバッグウインドウ */
 
@@ -116,27 +123,4 @@ li .dropdown {
   .form-control {
     color: $state-danger-text;
   }
-}
-
-#header {
-  background-color: teal;
-}
-
-#dropdown-title {
-  background-color: teal;
-}
-
-#top-main {
-  background-color: #fff;
-}
-
-li .dropdown-header {
-  background-color: rgba(200,200,200,0.5);
-  font-weight: bold;
-}
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
